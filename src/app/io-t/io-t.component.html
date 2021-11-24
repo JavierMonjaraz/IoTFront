@@ -1,1 +1,21 @@
-<p>io-t works!</p>
+<div class="main-div">
+  <mat-card class="card">
+    <P class="titulo">Led Controller</P>
+    <img *ngIf="isTurnedOn" class="imgled" src="../../assets/images/LEDon.png">
+    <img *ngIf="!isTurnedOn" class="imgled" src="../../assets/images/LEDoff.png">
+
+    <mat-slide-toggle class="btnstatus" *ngIf="isConected" [(ngModel)]="isTurnedOn" color="primary">{{statusLed()}}</mat-slide-toggle>
+
+    <div class="estatusServidor">
+      <span *ngIf="isConected" class="material-icons online">
+      bolt
+      </span>
+      <span *ngIf="!isConected" class="material-icons offline">
+      bolt
+      </span>
+      {{statusServer()}}
+    </div>
+
+
+  </mat-card>
+</div>

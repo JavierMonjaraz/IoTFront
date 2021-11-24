@@ -1,0 +1,41 @@
+.main-div {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  background-color: rgba(255,255,255,0.23)
+}
+
+.estatusServidor {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
+
+.titulo {
+  font-family: "Berlin Sans FB";
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.imgled {
+  padding-bottom: 25px;
+  display: block;
+  margin: auto;
+}
+
+.btnstatus {
+  padding-left: 25px;
+  margin: auto;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-io-t',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./io-t.component.css']
 })
 export class IoTComponent implements OnInit {
+  isTurnedOn = true;
+  isConected = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  statusLed(){
+    return this.isTurnedOn? 'Encendido' : 'Apagado'
+  }
+
+  statusServer(){
+    return this.isConected? 'Online' : 'Offline'
+  }
 }
