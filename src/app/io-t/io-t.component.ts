@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {WebsocketService} from 'src/app/services/websocket.service'
 
 @Component({
   selector: 'app-io-t',
@@ -6,10 +7,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./io-t.component.css']
 })
 export class IoTComponent implements OnInit {
-  isTurnedOn = true;
-  isConected = true;
+  isTurnedOn = false;
 
-  constructor() { }
+  constructor(public wsservice : WebsocketService) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +19,7 @@ export class IoTComponent implements OnInit {
   }
 
   statusServer(){
-    return this.isConected? 'Online' : 'Offline'
+    return this.wsservice.serverStatus? 'en línea' : 'No disponible'
   }
+
 }

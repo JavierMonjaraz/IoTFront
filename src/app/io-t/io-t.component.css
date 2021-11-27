@@ -5,7 +5,9 @@
   justify-content: center;
 }
 .card{
-  background-color: rgba(255,255,255,0.23)
+  height: 50vh;
+  width: 50vh;
+  background-color: rgba(255,255,255,0.50)
 }
 
 .estatusServidor {
@@ -36,6 +38,11 @@
 }
 
 .btnstatus {
-  padding-left: 25px;
+  padding-left: 125px;
   margin: auto;
+}
+
+.logo{
+  width: 120px;
+  padding-left: 100px;
 }

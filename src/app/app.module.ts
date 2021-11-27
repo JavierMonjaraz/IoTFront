@@ -12,6 +12,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {FormsModule} from '@angular/forms'
 
+// Websocket
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import {environment} from "../environments/environment";
+
+const config: SocketIoConfig ={
+  url: environment.wsUrl, options:{}
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +32,8 @@ import {FormsModule} from '@angular/forms'
     MatIconModule,
     MatCardModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent]

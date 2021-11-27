@@ -1,19 +1,23 @@
 <div class="main-div">
   <mat-card class="card">
     <P class="titulo">Led Controller</P>
-    <img *ngIf="isTurnedOn" class="imgled" src="../../assets/images/LEDon.png">
-    <img *ngIf="!isTurnedOn" class="imgled" src="../../assets/images/LEDoff.png">
+    <img *ngIf="isTurnedOn && wsservice.serverStatus" class="imgled" src="../../assets/images/LEDon.png">
+    <img *ngIf="!isTurnedOn || !wsservice.serverStatus " class="imgled" src="../../assets/images/LEDoff.png">
 
-    <mat-slide-toggle class="btnstatus" *ngIf="isConected" [(ngModel)]="isTurnedOn" color="primary">{{statusLed()}}</mat-slide-toggle>
+    <mat-slide-toggle class="btnstatus" *ngIf="wsservice.serverStatus" [(ngModel)]="isTurnedOn"
+                      color="primary">{{statusLed()}}</mat-slide-toggle>
 
     <div class="estatusServidor">
-      <span *ngIf="isConected" class="material-icons online">
+      <span class="material-icons">
+      dns
+      </span>
+      <span *ngIf="wsservice.serverStatus" class="material-icons online">
       bolt
       </span>
-      <span *ngIf="!isConected" class="material-icons offline">
+      <span *ngIf="!wsservice.serverStatus" class="material-icons offline">
       bolt
       </span>
-      {{statusServer()}}
+      Servidor {{statusServer()}}
     </div>
 
 
