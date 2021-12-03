@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  wsUrl: 'http://lediot.ddns.net:3000'
+  wsUrl: 'http://104.215.118.140:3000/'
 };
 
 /*
