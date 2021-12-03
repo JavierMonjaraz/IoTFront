@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
 import { IoTComponent } from './io-t/io-t.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormControl} from "@angular/forms";
 
 //Angular Material Elements
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {FormsModule} from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms'
 
 // Websocket
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
@@ -32,7 +33,7 @@ const config: SocketIoConfig ={
     MatIconModule,
     MatCardModule,
     MatSlideToggleModule,
-    FormsModule,
+    ReactiveFormsModule,
     SocketIoModule.forRoot(config)
   ],
   providers: [],

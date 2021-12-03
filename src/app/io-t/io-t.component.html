@@ -4,7 +4,7 @@
     <img *ngIf="isTurnedOn && wsservice.serverStatus" class="imgled" src="../../assets/images/LEDon.png">
     <img *ngIf="!isTurnedOn || !wsservice.serverStatus " class="imgled" src="../../assets/images/LEDoff.png">
 
-    <mat-slide-toggle class="btnstatus" *ngIf="wsservice.serverStatus" [(ngModel)]="isTurnedOn"
+    <mat-slide-toggle class="btnstatus" *ngIf="wsservice.serverStatus" [(ngModel)]="isTurnedOn" [formControl]="toggle"
                       color="primary">{{statusLed()}}</mat-slide-toggle>
 
     <div class="estatusServidor">

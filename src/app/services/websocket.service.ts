@@ -22,6 +22,6 @@ export class WebsocketService {
   }
 
   sendStatus(data:String){
-    this.socket.emit('Status',data)
+    this.socket.emit('message',data)
   }
 }
